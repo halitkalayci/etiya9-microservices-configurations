@@ -5,6 +5,12 @@ spring:
     url: "jdbc:postgresql://localhost:5432/productdb"
     username: postgres
     password: test
+  kafka:
+    bootstrapServer: "localhost:9092"
+    consumer:
+      group-id: productService
+      keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+      valueDeserializer: org.springframework.kafka.support.serializer.JsonDeserializer
   jpa:
     properties:
       hibernate:
