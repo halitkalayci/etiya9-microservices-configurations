@@ -11,8 +11,11 @@ spring:
       group-id: productService
       keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
       valueDeserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-    properties:
-      spring.kafka.consumer.properties.spring.json.trusted.packages: "*"
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
   jpa:
     properties:
       hibernate:
